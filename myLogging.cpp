@@ -22,8 +22,6 @@ int second;
 int minute;
 int hour;
 int day;
-int month;
-int year;
 int max_file_num;
 int fileFrequency;
 
