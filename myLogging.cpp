@@ -149,18 +149,18 @@ void myLogging::CreatingLogFile(int type, string fileName, int maxNum, int frequ
 }
 
 void myLogging::fullCheck(int maxNum){
-    for(int i=0; i<myLogging::storing.size();i++){
-        if(maxNum<myLogging::storing.size()){
-            string delFile=myLogging::storing[0];
+    for(int i=0; i<storing.size();i++){
+        if(maxNum<storing.size()){
+            string delFile=storing[0];
             string delJsonFile = delFile+".json";
             cout<< "deleting "<<delJsonFile<<endl;
-            myLogging::storing.erase(myLogging::storing.begin());
+            storing.erase(storing.begin());
             deleteFile(delFile,maxNum);
         }
     }
     cout<<"storing contains: ";
-    for(int j=0; j<myLogging::storing.size(); j++){
-        cout<< " "<< myLogging::storing[j]<<" ";
+    for(int j=0; j<storing.size(); j++){
+        cout<< " "<< storing[j]<<" ";
     }
 }
 
@@ -179,7 +179,7 @@ void myLogging::deleteFile(string fileName,int maxNum){
 void myLogging::LogCheck(int type, string fileName, int maxNum, int frequency){
     
     CreatingLogFile(type, fileName,  maxNum, frequency);
-    myLogging::storing.push_back(fileName);
+    storing.push_back(fileName);
     fullCheck(maxNum);
     cout<<endl;
 }
