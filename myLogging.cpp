@@ -139,12 +139,10 @@ void myLogging::CreatingLogFile(int type, string fileName, int maxNum, int frequ
     cout<<"Writing to the file "<< fileNameInJson<<endl;
     //writing in json format
     //brackets for json format
-    outfile<<"{"<<endl;
-    outfile<<"\t"<<"\"file name\":"<<"\""<<fileNameInJson<<"\","<<endl;
+    outfile<<"{"<<endl<<"\t"<<"\"file name\":"<<"\""<<fileNameInJson<<"\","<<endl;
     outfile<<"\t"<<"\"logging type\":"<<"\""<<log_type<<"\","<<endl;
     outfile<<"\t"<<"\"frequency\":"<<"\""<<frequency<<"\","<<endl;
-    outfile<<"\t"<<"\"maxFileSize\":"<<"\""<<maxNum<<"\","<<endl;
-    outfile<<"}"<<endl;
+    outfile<<"\t"<<"\"maxFileSize\":"<<"\""<<maxNum<<"\","<<endl<<"}"<<endl;
     
     outfile.close();
     cout << "Logging has ended. Closing the file " << fileNameInJson<< endl;
