@@ -2,7 +2,7 @@
 //  myLogging.hpp
 //  circular_logging_ece
 //
-//  Created by Ece Guler on 5.07.2022.
+//  Created by Ece Guler on 4.07.2022.
 //
 
 #ifndef myLogging_hpp
@@ -64,4 +64,4 @@ private:
 };
 
 
-#endif /* my_logging_hpp */
+#endif /* myLogging_hpp */
