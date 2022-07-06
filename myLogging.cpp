@@ -2,7 +2,7 @@
 //  myLogging.cpp
 //  circular_logging_ece
 //
-//  Created by Ece Guler on 5.07.2022.
+//  Created by Ece Guler on 4.07.2022.
 //
 
 #include "myLogging.hpp"
@@ -178,7 +178,6 @@ void myLogging::deleteFile(string fileName,int maxNum){
 
 void myLogging::LogCheck(int type, string fileName, int maxNum, int frequency){
     
-    //string fileNameConv= fileName + ".json";
     CreatingLogFile(type, fileName,  maxNum, frequency);
     myLogging::storing.push_back(fileName);
     fullCheck(maxNum);
